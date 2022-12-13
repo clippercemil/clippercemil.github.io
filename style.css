@@ -135,9 +135,19 @@ ul {
         width: 40px;
         height: auto;
     }
-
-
 }
+
+
+
+@media (max-width:768px) {
+
+
+    #head, #tel{
+        margin-left: 25px;
+    }
+}
+
+
 
 @media (min-width:768px) {
     .container {
