@@ -140,6 +140,20 @@ ul {
 
 
 @media (max-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+
+
+
+    html {
+        font-size: 5px;
+    }
+
+    .about2 img {
+        width: 40px;
+        height: auto;
+    }
 
     #head{
         margin-left: 15px;
@@ -151,7 +165,6 @@ ul {
         margin-right: 15px;
     }
 }
-
 
 
 @media (min-width:768px) {
