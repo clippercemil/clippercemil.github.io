@@ -139,11 +139,16 @@ ul {
 
 
 
-@media (max-width:768px) {
+@media (max-width:576px) {
 
-
-    #head, #tel{
-        margin-left: 17px;
+    #head{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    #tel{
+        
+        margin-left: 15px;
+        margin-right: 15px;
     }
 }
 
