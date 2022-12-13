@@ -145,6 +145,10 @@ ul {
     }
 
 
+    header {
+        max-height: 450px;
+        
+    }
 
     html {
         font-size: 5px;
