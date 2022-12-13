@@ -205,7 +205,91 @@ ul {
     box-sizing: border-box;
 }
 
+@media (min-width:1600px) {
+    .personel th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: #19262F;
+        color: white;
+    }
+    .personel td {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 1.4rem;
+    
+        text-align: center;
+    }
+    .personel td img {
 
+        width: 150px;
+        height: 150px;
+    
+    }
+    .personel {
+        border-collapse: collapse;
+        float: right;
+        width:1200px;
+        margin-left: 450px;
+        margin-top: 180px;
+        height: auto;
+
+        
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: normal;
+        border: none;
+        border-collapse: collapse;
+        max-width: 100%;
+        white-space: nowrap;
+        background-color: white;
+    }
+
+}
+
+@media (min-width:2000px) {
+    .personel th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: #19262F;
+        color: white;
+    }
+    .personel td {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 1.4rem;
+    
+        text-align: center;
+    }
+    .personel td img {
+
+        width: 150px;
+        height: 150px;
+    
+    }
+    .personel {
+        border-collapse: collapse;
+        float: right;
+        width:1200px;
+        margin-left: 750px;
+        margin-top: 180px;
+        height: auto;
+
+        
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: normal;
+        border: none;
+        border-collapse: collapse;
+        max-width: 100%;
+        white-space: nowrap;
+        background-color: white;
+    }
+
+}
 
 button {
     position: relative;
