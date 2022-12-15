@@ -441,7 +441,9 @@ button::before {
     .container {
         max-width: 1140px;
     }
-
+    #phonehead{
+        height: 600px;
+    }
 
     .container #imgg {
         width: 500px;
