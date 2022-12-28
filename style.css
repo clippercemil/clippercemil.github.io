@@ -777,10 +777,10 @@ nav {
         border-collapse: collapse;
         float: right;
         margin-right: 25px;
-        width: 400px;
+        width: 350px;
         height: auto;
-        margin-left: 50px;
-        margin-right: 30px;
+        margin-left: 20px;
+        margin-right: 10px;
         margin-top: 40px;
         z-index: 100;
         height: auto;
