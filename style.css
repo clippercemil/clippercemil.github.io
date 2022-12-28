@@ -746,7 +746,7 @@ nav {
     .personel th {
         padding-top: 12px;
         padding-bottom: 12px;
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
         background-color: #19262F;
         color: white;
@@ -755,7 +755,7 @@ nav {
     .personel td {
         padding-top: 12px;
         padding-bottom: 12px;
-        font-size: 2rem;
+        font-size: 1.3rem;
         text-align: center;
     }
 
@@ -770,9 +770,9 @@ nav {
         border-collapse: collapse;
         float: right;
         margin-right: 25px;
-        width: 500px;
+        width: 400px;
         height: auto;
-        margin-left: 20px;
+        margin-left: 50px;
         margin-right: 30px;
         margin-top: 40px;
         z-index: 100;
