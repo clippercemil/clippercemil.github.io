@@ -1164,6 +1164,18 @@ button::before {
         width: 300px;
         
      }
+     .personel {
+        border-collapse: collapse;
+        float: right;
+        margin-right: 25px;
+        width: 500px;
+        height: auto;
+        margin-left: 20px;
+        margin-right: 30px;
+        margin-top: 40px;
+        z-index: 100;
+        height: auto;
+    }
 }
 @media (max-width:576px) {
 
@@ -1236,10 +1248,6 @@ button::before {
         text-align: justify;
 
     }
-    #nav-links .nav-sakla{
-        display: none;
-    }
-
 }
 
 
