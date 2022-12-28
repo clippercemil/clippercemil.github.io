@@ -776,9 +776,9 @@ nav {
     .personel {
         border-collapse: collapse;
         float: right;
-        width: 350px;
+        width: 330px;
         height: auto;
-        margin-left: 20px;
+        margin-left: 10px;
         margin-right: 10px;
         margin-top: 40px;
         z-index: 100;
