@@ -8,10 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Clipper</title>
-    <script>
-        window.history.replaceState([],document.title,"/machinepark")
-    </script>
+    <title>Neo-Digital</title>
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,7 +30,7 @@
     <nav>
         <div class="container clearfix">
             <div id="logo-box">
-                <a href="index.html" class="logo text-uppercase">
+                <a href="" class="logo text-uppercase">
                     <img src="static/img/clipperlogo.jpg" style="height: 85px;width: 65px;">
                 </a>
             </div>
@@ -73,7 +71,18 @@
             </div>
         </div>
     </nav>
-
+    <!--
+    <div class="animated">
+        <div class="circle">
+            <div class="innercircle">
+                <div id="flex">
+                    <h1 id="number">0</h1>
+                    <h1>%</h1>
+                </div>
+            </div>  
+        </div>
+    </div>
+    -->
     <div class="container-fluid">
         <div class="row">
             <!-- Leftside bar -->
@@ -133,7 +142,7 @@
                 </nav>
             </div>
 
-             <div class="tm-main">
+            <div class="tm-main">
                 <!-- SİDE BAR uppercase tablo başlıkları ilk harfler büyük-->
                 <!-- Home section -->
                 <!-- Logolar değişecek-->
@@ -609,16 +618,15 @@
         <section>
             <div class="copyright1">
                 <div class="container">
-                    Clipper. <br>
+                    aldea. <br>
                     London, UK<br>
-                    Contact us 24/7 on support@clipper.com
+                    Contact us 24/7 on support@aldea.com
 
                     <br>Copyright © Your Website 2022
                 </div>
             </div>
 
         </section>
-
         <script src="js/jquery-3.4.1.min.js"></script> <!-- https://jquery.com/ -->
         <script src="js/jquery.singlePageNav.min.js"></script>
         <!-- https://github.com/ChrisWojcik/single-page-nav -->
@@ -630,6 +638,24 @@
         <!-- https://dimsemenov.com/plugins/magnific-popup/ -->
         <script src="slick/slick.min.js"></script> <!-- https://kenwheeler.github.io/slick/ -->
         <script src="js/templatemo-script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script>
+            $(".nav-icon").click(function () {
+                $("#nav-links").toggleClass("responsive");
+                return false;
+            });
+
+        </script>
 </body>
 
 </html>
