@@ -784,7 +784,7 @@ nav {
         z-index: 100;
         height: auto;
     }
-        .copyright1 {
+    .copyright1 {
         background-color: #19262F;
         padding-top: 2.4rem;
         padding-bottom: 2.4rem;
@@ -792,7 +792,7 @@ nav {
         float: right;
         color: #fff;
         text-align: center;
-        z-index: 10000000000;
+        z-index: 100;
     }
 
 
