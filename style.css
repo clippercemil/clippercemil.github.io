@@ -1529,13 +1529,13 @@ header p {
         float: left;
         width: 50%;
         padding-right: 100px;
-        padding-left: 150px;
+        padding-left: 80px;
     }
 
     #about-text .right {
         float: right;
         width: 50%;
-        padding-right: 150px;
+        padding-right: 80px;
         padding-left: 100px;
     }
 
