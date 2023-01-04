@@ -236,9 +236,28 @@ ul {
         width: 50%;
         height: auto;
     }
+    .copyright1 {
+        background-color: #19262F;
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+        width: 76%;
+        float: right;
+        color: #fff;
+        text-align: center;
+        z-index: 100;
+    }
 
-
-
+}
+.copyright1 {
+    background-color: #19262F;
+    margin-top: 8rem;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    width: 75%;
+    float: right;
+    color: #fff;
+    text-align: center;
+    z-index: 100;
 }
 
 :root {
@@ -1215,6 +1234,16 @@ button::before {
         padding-bottom: 0px;
         border-radius: 25px;
         text-align: left;
+    }
+    .copyright1 {
+        background-color: #19262F;
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+        width: 100%;
+        float: right;
+        color: #fff;
+        text-align: center;
+        z-index: 100;
     }
 }
 
