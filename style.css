@@ -805,16 +805,7 @@ nav {
         z-index: 100;
         height: auto;
     }
-    .copyright1 {
-        background-color: #19262F;
-        padding-top: 2.4rem;
-        padding-bottom: 2.4rem;
-        width: 100%;
-        float: right;
-        color: #fff;
-        text-align: center;
-        z-index: 100;
-    }
+
 
 
 }
@@ -1275,7 +1266,16 @@ button::before {
     .tm-sidebar{
         display: none;
     }
-
+    .copyright1 {
+        background-color: #19262F;
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+        width: 100%;
+        float: right;
+        color: #fff;
+        text-align: center;
+        z-index: 100;
+    }
 }
 
 @media (max-width:576px) {
