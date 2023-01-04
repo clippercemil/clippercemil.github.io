@@ -1,5 +1,3 @@
-
-
 * {
     padding: 0;
     margin: 0;
@@ -140,7 +138,12 @@ ul {
         width: 40px;
         height: auto;
     }
+    .personel td img {
 
+        width: 70px;
+        height: 70px;
+
+    }
 
 }
 @media (max-width:576px) {
@@ -172,7 +175,16 @@ ul {
         margin-left: 15px;
         margin-right: 15px;
     }
-
+    .personel {
+        border-collapse: collapse;
+        width: auto;
+        height: auto;
+        margin-left: 20px;
+        margin-right: 10px;
+        margin-top: 40px;
+        z-index: 100;
+        height: auto;
+    }
 
 }
 
@@ -229,11 +241,12 @@ ul {
         width: 50%;
         height: auto;
     }
+
     .copyright1 {
         background-color: #19262F;
         padding-top: 2.4rem;
         padding-bottom: 2.4rem;
-        width: 75%;
+        width: 76%;
         float: right;
         color: #fff;
         text-align: center;
@@ -252,7 +265,6 @@ ul {
     text-align: center;
     z-index: 100;
 }
-
 :root {
     --text-color: hsla(210, 50%, 85%, 1);
     --shadow-color: hsla(210, 40%, 52%, .4);
@@ -785,18 +797,6 @@ nav {
         right: 5px;
         font-size: 15rem;
     }
-    .personel {
-        border-collapse: collapse;
-        float: right;
-        width: 340px;
-        height: auto;
-        margin-left: 20px;
-        margin-right: 10px;
-        margin-top: 40px;
-        z-index: 100;
-        height: auto;
-    }
-
 
 
 }
@@ -1219,7 +1219,7 @@ button::before {
         border-radius: 25px;
         text-align: left;
     }
-
+    
 }
 
 @media (max-width:768px) {
@@ -1258,6 +1258,7 @@ button::before {
         text-align: center;
         z-index: 100;
     }
+
 }
 
 @media (max-width:576px) {
@@ -1282,6 +1283,15 @@ button::before {
     .kutum1 p {
         width: 300px;
 
+    }
+    .personel {
+        border-collapse: collapse;
+        width: 350px;
+        height: auto;
+        margin-left: 30px;
+        margin-right: 40px;
+        margin-top: 40px;
+        z-index: 100;
     }
     
 }
@@ -1524,7 +1534,7 @@ header p {
     #about-text .left {
         float: left;
         width: 50%;
-        padding-right: 50px;
+        padding-right: 40px;
         padding-left: 100px;
     }
 
@@ -1532,7 +1542,7 @@ header p {
         float: right;
         width: 50%;
         padding-right: 100px;
-        padding-left: 50px;
+        padding-left: 40px;
     }
 
 }
@@ -1581,24 +1591,4 @@ p {
     margin-left: 25px;
 
 }
-
-.copyright1 {
-    background-color: #19262F;
-    margin-top: 8rem;
-    padding-top: 2.4rem;
-    padding-bottom: 2.4rem;
-    width: 75%;
-    float: right;
-    color: #fff;
-    text-align: center;
-    z-index: 100;
-}
-
-
-
-
-
-
-
-
 
