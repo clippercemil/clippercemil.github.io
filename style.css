@@ -1024,7 +1024,7 @@ td {
 th {
     background: white;
     position: sticky;
-    top: 100px;
+    top: 120px;
     /* Don't forget this, required for the stickiness */
     box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
 }
