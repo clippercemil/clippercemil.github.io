@@ -577,6 +577,7 @@ button::before {
 
 #get {
     float: right;
+    margin-top: 10px;
 
 }
 
@@ -633,7 +634,7 @@ nav {
 #logo-box {
     float: left;
     padding-top: 0.5rem;
-    margin-right: 170px;
+    margin-right: 120px;
 }
 
 
@@ -649,6 +650,7 @@ nav {
     color: #000000;
     font-size: 1.4rem;
     font-weight: 700;
+    margin-top: 15px;
     display: block;
     padding: 1.2rem;
     letter-spacing: 0.1rem;
