@@ -121,7 +121,6 @@ ul {
     padding: 1rem;
 
 }
-
 @media (min-width:576px) {
     .container {
         max-width: 540px;
@@ -255,6 +254,7 @@ ul {
     text-align: center;
     z-index: 100;
 }
+
 :root {
     --text-color: hsla(210, 50%, 85%, 1);
     --shadow-color: hsla(210, 40%, 52%, .4);
@@ -359,7 +359,6 @@ button::before {
     width: 20%;
     height: auto;
 }
-
 .kutum1 {
     border-style: solid;
     border-width: 1px;
@@ -375,16 +374,15 @@ button::before {
     padding-bottom: 0px;
     border-radius: 25px;
     text-align: left;
-}
-
-.kutum1 p {
+ }
+ .kutum1 p {
     text-align: left;
     width: 830px;
     height: auto;
+    
 
-
-}
-
+ }
+ 
 @media (min-width:1200px) {
     .container {
         max-width: 1140px;
@@ -455,8 +453,8 @@ nav {
     font-family: Montserrat;
     background-color: #fff;
     color: #fff;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     position: fixed;
     z-index: 1500;
 }
@@ -577,10 +575,8 @@ button::before {
 
 
 
-
 #get {
     float: right;
-    margin-top: 15px;
 
 }
 
@@ -628,7 +624,8 @@ nav {
     font-family: Montserrat;
     background-color: #fff;
     color: #fff;
-    padding-bottom: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     position: fixed;
     z-index: 1500;
 }
@@ -643,6 +640,7 @@ nav {
 #logo-box .logo {
     color: darkblue;
     font-weight: 700;
+    font-size: 2.8rem;
 }
 
 
@@ -652,8 +650,6 @@ nav {
     font-size: 1.4rem;
     font-weight: 700;
     display: block;
-    padding-top: 2.5rem;
-
     padding: 1.2rem;
     letter-spacing: 0.1rem;
     transition: color 0.4s;
@@ -664,11 +660,12 @@ nav {
 }
 
 
-.copyright {
+
+.copyright1 {
     background-color: #19262F;
     padding-top: 2.4rem;
     padding-bottom: 2.4rem;
-    width: 100%;
+    width: 76%;
     float: right;
     color: #fff;
     text-align: center;
@@ -677,7 +674,7 @@ nav {
 
 .personel td,
 .personel th {
-
+    
     border: 1px solid #ddd;
     padding: 8px;
 
@@ -1017,10 +1014,6 @@ nav {
 }
 
 
-
-
-
-
 th,
 td {
     padding: 0.25rem;
@@ -1033,7 +1026,6 @@ th {
     /* Don't forget this, required for the stickiness */
     box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
 }
-
 #logo-box .logo {
     color: darkblue;
     font-weight: 700;
@@ -1044,7 +1036,6 @@ th {
 #nav-links .nav-item {
     float: left;
     margin: 0.5rem;
-    margin-top: 20px;
 
 }
 
@@ -1053,7 +1044,6 @@ th {
     font-size: 1.3rem;
     font-weight: 700;
     display: block;
-    
     padding: 1.2rem;
     letter-spacing: 0.1rem;
     transition: color 0.4s;
@@ -1132,6 +1122,33 @@ button .left:hover~.right::after {
     transform: translate(0, -50%) rotate(7deg)
 }
 
+/* bubbles */
+button::before {
+    content: '';
+    pointer-events: none;
+    opacity: .6;
+    background:
+        radial-gradient(circle at 20% 35%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+        radial-gradient(circle at 75% 44%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
+        radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
+
+    width: 100%;
+    height: 300%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+    from {
+        transform: translate();
+    }
+
+    to {
+        transform: translate(0, -66.666%);
+    }
+}
 
 
 #nav-links .nav-link:hover {
@@ -1326,6 +1343,7 @@ button .left:hover~.right::after {
 }
 
 
+
 /*HEADER*/
 header {
     background-color: rgb(244, 244, 244);
@@ -1491,12 +1509,14 @@ header p {
 #about-text .left {
     float: none;
     width: 100%;
+    text-align: justify;
     padding-right: 50px;
     padding-left: 50px;
 }
 
 #about-text .right {
     float: none;
+    text-align: justify;
     width: 100%;
     padding-left: 50px;
     padding-right: 50px;
@@ -1541,8 +1561,6 @@ header p {
 }
 
 
-
-
 /* How It Works? Simple.*/
 #how {
     background-color: #fff;
@@ -1557,8 +1575,7 @@ header p {
     margin-top: 50px;
 }
 
-#how h4,
-p {
+#how h4, p {
     font-size: 2rem;
 }
 
@@ -1567,4 +1584,13 @@ p {
     margin-left: 25px;
 
 }
+
+.copyright {
+    background-color: #19262F;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    color: #fff;
+    text-align: center;
+}
+
 
