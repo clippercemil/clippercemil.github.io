@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/ecc3b319fc.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>PartsClipper</title>
+    <script>
+        window.history.replaceState([], document.title, "/home")
+    </script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+    <!--<meta http-equiv="refresh" content="10">-->
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .dropdown {
+        width: 100px;
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+
+    }
+
+
+    .dropdown ul {
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .dropdown a,
+    .dropdown.toggle>label {
+        display: block;
+        padding: 0 0 0 10px;
+        text-decoration: none;
+        line-height: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #19262F;
+        background-color: #fff;
+
+
+    }
+
+    .dropdown li {
+        height: 0px;
+        overflow: hidden;
+        transition: all 300ms;
+
+
+    }
+
+
+    .dropdown.hover li {
+        transition-delay: 300ms;
+
+
+    }
+
+
+    .dropdown.hover:hover li,
+    .dropdown.toggle>input:checked~ul li {
+        height: 33px;
+
+    }
+
+
+
+
+
+
+    .accordion dt>a {
+        text-align: left;
+        font-weight: 700;
+        padding: 2em;
+        display: block;
+        text-decoration: none;
+        color: #19262F;
+        -webkit-transition: background-color 0.5s ease-in-out;
+    }
+
+    .accordion dd {
+        background-color: #fff;
+        color: #19262F;
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    .accordion dd>p {
+        padding: 1em 2em 1em 2em;
+    }
+
+    .accordion {
+        position: relative;
+        background-color: #fff;
+    }
+
+
+    .accordionTitle {
+        background-color: #fff;
+        border-bottom: 1px solid #19262F;
+    }
+
+    .accordionTitle:before {
+        content: "+";
+        font-size: 1.5em;
+        line-height: 0.5em;
+        float: left;
+        -moz-transition: -moz-transform 0.3s ease-in-out;
+        -o-transition: -o-transform 0.3s ease-in-out;
+        -webkit-transition: -webkit-transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .accordionTitle:hover {
+        background-color: #fff;
+    }
+
+    .accordionTitleActive {
+        background-color: #fff;
+    }
+
+    .accordionTitleActive:before {
+        -webkit-transform: rotate(-225deg);
+        -moz-transform: rotate(-225deg);
+        transform: rotate(-225deg);
+    }
+
+    .accordionItem {
+        height: auto;
+        overflow: hidden;
+    }
+
+    @media all {
+        .accordionItem {
+            max-height: 50em;
+            -moz-transition: max-height 1s;
+            -o-transition: max-height 1s;
+            -webkit-transition: max-height 1s;
+            transition: max-height 1s;
+        }
+    }
+
+    @media screen and (min-width: 48em) {
+        .accordionItem {
+            max-height: 15em;
+            -moz-transition: max-height 0.5s;
+            -o-transition: max-height 0.5s;
+            -webkit-transition: max-height 0.5s;
+            transition: max-height 0.5s;
+        }
+    }
+
+    .accordionItemCollapsed {
+        max-height: 0;
+    }
+
+    .animateIn {
+        -webkit-animation-name: accordionIn;
+        -webkit-animation-duration: 0.65s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-direction: normal;
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: both;
+        -webkit-animation-delay: 0s;
+        -moz-animation-name: normal;
+        -moz-animation-duration: 0.65s;
+        -moz-animation-iteration-count: 1;
+        -moz-animation-direction: alternate;
+        -moz-animation-timing-function: ease-in-out;
+        -moz-animation-fill-mode: both;
+        -moz-animation-delay: 0s;
+        animation-name: accordionIn;
+        animation-duration: 0.65s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        animation-delay: 0s;
+    }
+
+    .animateOut {
+        -webkit-animation-name: accordionOut;
+        -webkit-animation-duration: 0.75s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: both;
+        -webkit-animation-delay: 0s;
+        -moz-animation-name: accordionOut;
+        -moz-animation-duration: 0.75s;
+        -moz-animation-iteration-count: 1;
+        -moz-animation-direction: alternate;
+        -moz-animation-timing-function: ease-in-out;
+        -moz-animation-fill-mode: both;
+        -moz-animation-delay: 0s;
+        animation-name: accordionOut;
+        animation-duration: 0.75s;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        animation-delay: 0s;
+    }
+
+    @-webkit-keyframes accordionIn {
+        0% {
+            opacity: 0;
+            -webkit-transform: scale(0.8);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+        }
+    }
+
+    @-moz-keyframes accordionIn {
+        0% {
+            opacity: 0;
+            -moz-transform: scale(0.8);
+        }
+
+        100% {
+            opacity: 1;
+            -moz-transform: scale(1);
+        }
+    }
+
+    @keyframes accordionIn {
+        0% {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @-webkit-keyframes accordionOut {
+        0% {
+            opacity: 1;
+            -webkit-transform: scale(1);
+        }
+
+        100% {
+            opacity: 0;
+            -webkit-transform: scale(0.8);
+        }
+    }
+
+    @-moz-keyframes accordionOut {
+        0% {
+            opacity: 1;
+            -moz-transform: scale(1);
+        }
+
+        100% {
+            opacity: 0;
+            -moz-transform: scale(0.8);
+        }
+    }
+
+    @keyframes accordionOut {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        100% {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+    }
+</style>
+
+
+
+<body>
+
+    <nav>
+        <div class="container clearfix">
+            <div id="logo-box">
+                <a href="index.html" class="logo text-uppercase">
+                    <img src="static/img/clipperlogo.jpg" style="height: 70px;width: 180px;">
+                </a>
+            </div>
+
+            <div id="nav-links" class="responsive">
+                <ul>
+                    <li class="nav-item text-uppercase nav-icon">
+                        <a href="" class="nav-link">
+                            <i style="font-size: 2.5rem;" class="fa-solid fa-bars"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="home.html" class="nav-link">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase nav-sakla">
+                        <a href="machinepark.html" class="nav-link">
+                            Machine Park
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="services.html" class="nav-link">
+                            Services
+                        </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <div class="dropdown hover">
+                            <a href="#" class="nav-link">Resources</a>
+                            <ul id="yuvarla">
+
+                                <li><a style="font-weight: lighter;" href="partsclipper_blog.html">Blog</a></li>
+                                <li><a style="font-weight: lighter;" href="">FAQ</a></li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <a href="becomeourpartner.html" class="nav-link">
+                            Become Our Partner
+                        </a>
+                    </li>
+                    <li>
+                        <a id="get" href="#getaquote">
+                            <button class="button button2">Get A Quote</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+
+
+    <br><br><br><br><br><br><br>
+    <div class="container">
+        <h2>Frequently Asked Questions</h2><br>
+        <div class="accordion">
+            <dl>
+                <dt><a class="accordionTitle" href="#">&emsp;What is PartsClipper?</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                    <p>Leveraging our manufacturing network in Turkey, we offer the best quality, price and
+                        speed-to-delivery combination in the market from prototyping to serial manufacturing of parts.
+                    </p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">&emsp;What are PartsClipper’s services?</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                    <p>We are capable of many widely used manufacturing methods, namely CNC Machining, Sheet
+                        Forming,
+                        Welding, 3D Printing and Gear Production, as well as post-manufacturing processes like Surface
+                        Finishing. Our services also include assembly for specific needs.</p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">&emsp;Does PartsClipper manufacture the parts?</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                    <p>No, we don’t have any machines of our own, but we do have a large manufacturing
+                        network in Turkey. We enable our customers to access the available capacity of our qualified and
+                        audited workshops within our manufacturing network while offering full visibility over the
+                        process. </p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">&emsp;Which sectors do you serve?</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                    <p>We provide manufacturing for all industries that require metal and plastic parts.
+                        These sectors include defense, automotive, research, robotics, household appliances, machinery,
+                        aerospace and aviation, infrastructure and many more. </p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">&emsp;Which materials do you work with?</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                    <p>We work with a wide variety of common metals and plastics as well as rare materials.
+                    </p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">&emsp;Does PartsClipper have a Minimum Order of Quantity
+                        Policy?</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                    <p>We do not have a MoQ policy, because we know how delicate some processes can be,
+                        especially when it comes to prototyping. We accommodate our clients’ needs from prototyping to
+                        serial manufacturing. </p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">&emsp;How does it work? What do I need to get a quote?</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                    <p>Not much! We create our quote based on all popular CAD files (STEP | STP | SLDPRT |
+                        IPT | 3DXML | PRT | SAT). You can also submit a PDF or another type of technical drawing with us
+                        for a quote. Just share your design and let us come back to you with the best quote within 24
+                        hours. </p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">&emsp;When will my quote be ready?</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                    <p>Typically, we send our quote within one business day on an EXW Turkey basis. For
+                        complex requests, it might take a bit more. </p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">&emsp;How does PartsClipper achieve the best price - quality -
+                        speed combination?</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                    <p>Our manufacturing hub consists of vetted workshops that have years of experience in
+                        their relevant sectors. They have skilled workers and cutting-edge machine parks in addition to
+                        professional work. We are able to provide the best price - quality - speed combination in the
+                        market by tapping into their unused manufacturing capacity. </p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">&emsp;How does PartsClipper assure quality?</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                    <p>We grow our hub based on certain criteria, manufacturing quality being the most
+                        important one. We work with seasoned manufacturers who have ISO9001 at a minimum and other
+                        certifications for various industrial standards. After the parts are manufactured, we perform
+                        internal quality control before every delivery. For specific quality control procedures, please
+                        contact our team.</p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">&emsp;How does PartsClipper protect my intellectual property?</a>
+                </dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                    <p>We are meticulous about our customers’ intellectual property. Your design files are
+                        anonymised and shared only with the specific partner who will manufacture the parts, within
+                        legal frames. </p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">&emsp;What are my payment options?</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                    <p>At the moment, we accept SWIFT payments only. </p>
+                </dd>
+            </dl>
+        </div>
+    </div><br><br><br><br><br>
+
+
+
+    <div class="copyright">
+        <div class="container">
+            <br>
+
+            <a href="index.html" class="logo text-uppercase">
+                <img src="static/img/clipperlogo1.jpg" style="height: 70px;width: 180px;  ">
+            </a><br><br>
+
+            PartsClipper Manufacturing Co. <br><br>
+
+            Teknopark İstanbul <br>
+            Sanayi Mah. Teknopark Bulvarı, İstanbul<br><br>
+            Contact us 24/7 at cemil@partsclipper.com<br><br>
+            <a target="_blank" style="color: #fff;" href="http://www.linkedin.com/company/partsclipper"><i
+                    class="fa-brands fa-linkedin"></i><br><br></a>
+
+            Copyright © Your Website 2022<br><br>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>/*!
+    * classie - class helper functions
+    * from bonzo https://github.com/ded/bonzo
+   /*!
+    * classie - class helper functions
+    * from bonzo https://github.com/ded/bonzo
+    * 
+    * classie.has( elem, 'my-class' ) -> true/false
+    * classie.add( elem, 'my-new-class' )
+    * classie.remove( elem, 'my-unwanted-class' )
+    * classie.toggle( elem, 'my-class' )
+    */
+
+            /*jshint browser: true, strict: true, undef: true */
+            /*global define: false */
+            (function (window) {
+                'use strict';
+                function classReg(className) {
+                    return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+                }
+                var hasClass, addClass, removeClass;
+
+                if ('classList' in document.documentElement) {
+                    hasClass = function (elem, c) {
+                        return elem.classList.contains(c);
+                    };
+                    addClass = function (elem, c) {
+                        elem.classList.add(c);
+                    };
+                    removeClass = function (elem, c) {
+                        elem.classList.remove(c);
+                    };
+                }
+                else {
+                    hasClass = function (elem, c) {
+                        return classReg(c).test(elem.className);
+                    };
+                    addClass = function (elem, c) {
+                        if (!hasClass(elem, c)) {
+                            elem.className = elem.className + ' ' + c;
+                        }
+                    };
+                    removeClass = function (elem, c) {
+                        elem.className = elem.className.replace(classReg(c), ' ');
+                    };
+                }
+
+                function toggleClass(elem, c) {
+                    var fn = hasClass(elem, c) ? removeClass : addClass;
+                    fn(elem, c);
+                }
+                var classie = {
+                    hasClass: hasClass,
+                    addClass: addClass,
+                    removeClass: removeClass,
+                    toggleClass: toggleClass,
+                    has: hasClass,
+                    add: addClass,
+                    remove: removeClass,
+                    toggle: toggleClass
+                };
+                if (typeof define === 'function' && define.amd) {
+                    define(classie);
+                } else {
+                    window.classie = classie;
+                }
+            })(window);
+        var $ = function (selector) {
+            return document.querySelector(selector);
+        }
+        var accordion = $('.accordion');
+        accordion.addEventListener("click", function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            if (e.target && e.target.nodeName == "A") {
+                var classes = e.target.className.split(" ");
+                if (classes) {
+                    for (var x = 0; x < classes.length; x++) {
+                        if (classes[x] == "accordionTitle") {
+                            var title = e.target;
+                            var content = e.target.parentNode.nextElementSibling;
+                            classie.toggle(title, 'accordionTitleActive');
+                            if (classie.has(content, 'accordionItemCollapsed')) {
+                                if (classie.has(content, 'animateOut')) {
+                                    classie.remove(content, 'animateOut');
+                                }
+                                classie.add(content, 'animateIn');
+                            } else {
+                                classie.remove(content, 'animateIn');
+                                classie.add(content, 'animateOut');
+                            }
+                            classie.toggle(content, 'accordionItemCollapsed');
+                        }
+                    }
+                }
+            }
+        });</script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        $(".nav-icon").click(function () {
+            $("#nav-links").toggleClass("responsive");
+            return false;
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+    <script>
+        // close the toggle menu if user clicks outside of the menu
+
+        $(document).click(function (event) {
+            if (
+                $('.toggle > input').is(':checked') &&
+                !$(event.target).parents('.toggle').is('.toggle')
+            ) {
+                $('.toggle > input').prop('checked', false);
+            }
+        })
+    </script>
+
+
+
+</body>
+
+
+
+
+
+
+</body>
