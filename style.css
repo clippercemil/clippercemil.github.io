@@ -111,7 +111,6 @@ ul {
 .col {
     float: left;
     width: 100%;
-    padding: 1rem;
 
 }
 
@@ -128,7 +127,9 @@ ul {
     }
 
 
-
+    #myBtnContainer a{
+        font-size: 7px;
+    }
     html {
         font-size: 7px;
     }
@@ -143,6 +144,9 @@ ul {
         height: 70px;
 
     }
+    h1{
+        font-size: 13px;
+    }
 
 }
 @media (max-width:576px) {
@@ -155,7 +159,12 @@ ul {
         max-height: 450px;
         
     }
-
+    h1{
+        font-size: 10px;
+    }
+    #myBtnContainer a{
+        font-size: 7px;
+    }
     html {
         font-size: 6px;
     }
@@ -186,7 +195,9 @@ ul {
     html {
         font-size: 9px;
     }
-
+    #myBtnContainer a{
+        font-size: 8px;
+    }
     .col {
         width: 50%;
     }
@@ -209,7 +220,9 @@ ul {
     html {
         font-size: 9px;
     }
-
+    #myBtnContainer a{
+        font-size: 17px;
+    }
     .col {
         width: 33.333%;
     }
@@ -217,6 +230,7 @@ ul {
     .container #imgg {
         width: 400px;
         height: auto;
+        margin-left: 50px;
         float: right;
     }
 
@@ -240,6 +254,9 @@ ul {
         color: #fff;
         text-align: center;
         z-index: 100;
+    }
+    h1{
+        font-size: 13px;
     }
 
 }
@@ -331,7 +348,6 @@ button::before {
         radial-gradient(circle at 20% 35%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
         radial-gradient(circle at 75% 44%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
         radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
-
     width: 100%;
     height: 300%;
     top: 0;
@@ -339,12 +355,10 @@ button::before {
     position: absolute;
     animation: bubbles 5s linear infinite both;
 }
-
 @keyframes bubbles {
     from {
         transform: translate();
     }
-
     to {
         transform: translate(0, -66.666%);
     }
@@ -604,14 +618,14 @@ nav {
 #logo-box {
     float: left;
     padding-top: 0.5rem;
-    margin-right: 120px;
+    margin-right: 80px;
 }
 
 
 #logo-box .logo {
     color: darkblue;
     font-weight: 700;
-    font-size: 2.8rem;
+    font-size: 2rem;
 }
 
 
@@ -999,9 +1013,9 @@ th {
     box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
 }
 #logo-box .logo {
-    color: darkblue;
+    color: #19262F;
     font-weight: 700;
-    font-size: 2.8rem;
+    font-size: 2rem;
 }
 
 
@@ -1154,7 +1168,9 @@ button .left:hover~.right::after {
         border-radius: 25px;
         text-align: left;
     }
-    
+    .butonn{
+        opacity: 0;
+    }
 }
 
 @media (max-width:768px) {
@@ -1536,5 +1552,3 @@ header p {
     color: #fff;
     text-align: center;
 }
-
-
