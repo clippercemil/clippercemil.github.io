@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <script src="https://kit.fontawesome.com/ecc3b319fc.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +13,6 @@
     <script>
         window.history.replaceState([], document.title, "/machinepark")
     </script>
-    <link rel="icon" href="static/img/clippertitle.jpg" type="static/img/clippertitle.jpg type">    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -28,6 +28,68 @@
 
 
 </head>
+<style>
+    .dropdown {
+        width: 100px;
+        display: inline-block;
+        position: relative;
+        margin-right: 10px;
+
+    }
+
+
+    .dropdown ul {
+        background-color: #fff;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .dropdown a,
+    .dropdown.toggle>label {
+        display: block;
+        padding: 0 0 0 10px;
+        text-decoration: none;
+        line-height: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #19262F;
+        background-color: #fff;
+
+
+    }
+
+    .dropdown li {
+        height: 0px;
+        overflow: hidden;
+        transition: all 300ms;
+
+
+    }
+
+
+    .dropdown.hover li {
+        transition-delay: 300ms;
+
+
+    }
+
+
+    .dropdown.hover:hover li,
+    .dropdown.toggle>input:checked~ul li {
+        height: 33px;
+
+
+    }
+
+    #yuvarla {
+        border: 3px solid;
+        border-radius: 20px;
+
+    }
+</style>
 
 <body>
     <nav>
@@ -50,7 +112,7 @@
                             Home
                         </a>
                     </li>
-                    <li class="nav-item text-uppercase nav-sakla">
+                    <li class="nav-item text-uppercase">
                         <a href="" class="nav-link">
                             Machine Park
                         </a>
@@ -59,6 +121,17 @@
                         <a href="services.html" class="nav-link">
                             Services
                         </a>
+                    </li>
+                    <li class="nav-item text-uppercase">
+                        <div  class="dropdown hover">
+                            <a href="#" class="nav-link">Resources</a>
+                            <ul id="yuvarla">
+
+                                <li><a style="font-weight: lighter;" href="partsclipper_blog.html">Blog</a></li>
+                                <li><a style="font-weight: lighter;" href="partsclipper_faq.html">FAQ</a></li>
+
+                            </ul>
+                        </div>
                     </li>
                     <li class="nav-item text-uppercase">
                         <a href="becomeourpartner.html" class="nav-link">
