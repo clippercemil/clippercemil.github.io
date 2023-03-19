@@ -406,24 +406,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $("a").on('click', function (event) {
-
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function () {
-
-                        window.location.hash = hash;
-                    });
-                }
-            });
-        });
-    </script>
-    <script>
         // close the toggle menu if user clicks outside of the menu
 
         $(document).click(function (event) {
