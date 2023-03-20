@@ -1,7 +1,3 @@
-
-
-/* Layout */
-
 .tm-main { width: 100%; }
 
 
@@ -58,7 +54,7 @@
 
 .nav-link {
 	position: relative;
-	color: #006699;
+	color: #19262F;
 	font-size: 1.4rem;
 	padding-top: 15px;
 	font-weight: 300px;
@@ -73,7 +69,7 @@
 	width: 0;
 	height: 0;
 	border-top: 21px solid transparent;
-	border-left: 20px solid #006699;
+	border-left: 20px solid #19262F;
 	border-bottom: 21px solid transparent;
 	opacity: 0;
 	transition: all 0.3s ease;
@@ -81,8 +77,8 @@
 
 .nav-item:hover .nav-link,
 .nav-link.current {
-	background-color: #F2F2F2;
-	color: #006699;
+	background-color: #fff;
+	color: #19262F;
 	padding-left: 30px;
 }
 
@@ -95,4 +91,3 @@
 	width: 40px;
 	margin-right: 20px;
 }
-
