@@ -36,6 +36,7 @@
         display: inline-block;
         position: relative;
         margin-right: 10px;
+        font-size: 13.5px;
 
     }
 
@@ -95,8 +96,14 @@
 
 
 
-   /* GERİ DÖN BUTTON CSS */
+    /* GERİ DÖN BUTTON CSS */
     .butonn {
+
+        display: inline-block;
+
+        top: 650px;
+
+        position: fixed;
 
         border-radius: 4px;
 
@@ -119,11 +126,6 @@
         cursor: pointer;
 
         margin: 5px;
-        place-self: end;
-        position: sticky;
-        margin-top: calc(100vh + var(--back-to-top-offset));
-        bottom: 1em;
-        right: 2em;
     }
 
     .butonn span {
@@ -243,7 +245,7 @@
                         </a>
                     </li>
                     <li>
-                        <a id="get" href="../home.html#getaquote">
+                        <a id="get" href="../index.html#getaquote">
                             <button class="button button2">Get A Quote</button>
                         </a>
                     </li>
@@ -274,7 +276,11 @@
             </div>
         </div>
     </header>
-
+    <a href="../partsclipper_blog.html">
+        <button class="butonn">
+            <span>Return</span>
+        </button>
+    </a>
 
     <section id="basliklar" style="margin-top: 50px;">
         <div class="container">
@@ -333,11 +339,7 @@
                 </p><br><br><br><br>
             </div>
         </div>
-        <a href="../partsclipper_blog.html">
-            <button class="butonn" style="vertical-align:middle;margin-top: 50px;">
-                <span>Return</span>
-            </button>
-        </a>
+
         <div class="copyright">
             <div class="container">
                 <br>
@@ -404,6 +406,7 @@
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    
     <script>
         // close the toggle menu if user clicks outside of the menu
 
