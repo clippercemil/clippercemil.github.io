@@ -36,7 +36,6 @@
         display: inline-block;
         position: relative;
         margin-right: 10px;
-        font-size: 13.5px;
 
     }
 
@@ -95,15 +94,8 @@
 
 
 
-
     /* GERİ DÖN BUTTON CSS */
     .butonn {
-
-        display: inline-block;
-
-        top: 650px;
-
-        position: fixed;
 
         border-radius: 4px;
 
@@ -126,6 +118,11 @@
         cursor: pointer;
 
         margin: 5px;
+        place-self: end;
+        position: sticky;
+        margin-top: calc(100vh + var(--back-to-top-offset));
+        bottom: 1em;
+        right: 2em;
     }
 
     .butonn span {
@@ -137,6 +134,7 @@
         position: relative;
 
         transition: 0.5s;
+
     }
 
     .butonn span:after {
@@ -165,7 +163,6 @@
 
         right: 0;
     }
-
 
 
     @media (max-width:576px) {
