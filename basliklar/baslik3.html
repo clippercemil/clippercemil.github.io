@@ -36,6 +36,7 @@
         display: inline-block;
         position: relative;
         margin-right: 10px;
+        font-size: 13.5px;
 
     }
 
@@ -95,8 +96,15 @@
 
 
 
-   /* GERİ DÖN BUTTON CSS */
+    /* GERİ DÖN BUTTON CSS */
+    /* GERİ DÖN BUTTON CSS */
     .butonn {
+
+        display: inline-block;
+
+        top: 650px;
+
+        position: fixed;
 
         border-radius: 4px;
 
@@ -119,12 +127,8 @@
         cursor: pointer;
 
         margin: 5px;
-        place-self: end;
-        position: sticky;
-        margin-top: calc(100vh + var(--back-to-top-offset));
-        bottom: 1em;
-        right: 2em;
     }
+
 
     .butonn span {
 
@@ -243,7 +247,7 @@
                         </a>
                     </li>
                     <li>
-                        <a id="get" href="../home.html#getaquote">
+                        <a id="get" href="../index.html#getaquote">
                             <button class="button button2">Get A Quote</button>
                         </a>
                     </li>
@@ -274,7 +278,11 @@
             </div>
         </div>
     </header>
-
+    <a href="../partsclipper_blog.html">
+        <button class="butonn">
+            <span>Return</span>
+        </button>
+    </a>
 
     <section id="basliklar" style="margin-top: 50px;">
         <div class="container">
@@ -300,11 +308,12 @@
                 <p>It is important to note that the difficulty of machining a material also depends on the application,
                     the type of machine and the machining process used.</p>
                 <br><br>
-                <h2>At<a href="https://www.linkedin.com/company/partsclipper/"> PartsClipper Manufacturing Co.,</a> We do CNC machining and much more!</h2> 
-                <p>
-                    Contact us today to get your <a href="../home.html#getaquote">#quote</a>:
-                    <a href="mailto:cemil@partsclipper.com">cemil@partsclipper.com</a>
-                </p>  
+                <h2>At<a href="https://www.linkedin.com/company/partsclipper/"> PartsClipper
+                        Manufacturing Co.,</a>We do CNC machining and much more!
+                </h2>
+                <p>Contact me today at
+                    <a href="mailto:cemil@partsclipper.com">cemil@partsclipper.com</a> to get your quote!
+                </p>
                 <br>
                 <p>
                     </a><a href="">#machining&nbsp;
@@ -319,11 +328,7 @@
                 </p><br><br><br><br>
             </div>
         </div>
-        <a href="../partsclipper_blog.html">
-            <button class="butonn" style="vertical-align:middle;margin-top: 50px;">
-                <span>Return</span>
-            </button>
-        </a>
+
         <div class="copyright">
             <div class="container">
                 <br>
@@ -350,27 +355,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -390,7 +374,24 @@
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
 
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
     <script>
         // close the toggle menu if user clicks outside of the menu
 
